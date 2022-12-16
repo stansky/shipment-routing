@@ -1,0 +1,47 @@
+{
+  "name": "shipment-routing",
+  "version": "1.0.0",
+  "description": "Platform Science Code Exercise",
+  "exports": "./index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prettier:check": "prettier --list-different '**/*.js'",
+    "prettier:fix": "prettier --write '**/*.js'",
+    "lint": "npm run prettier:check && npx eslint --fix",
+    "lint:fix": "npm run lint -- --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stansky/shipment-routing.git"
+  },
+  "bin": {
+    "routes": "./bin/index.js"
+  },
+  "author": "Michael Stanescu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stansky/shipment-routing/issues"
+  },
+  "homepage": "https://github.com/stansky/shipment-routing#readme",
+  "devDependencies": {
+    "eslint": "^8.29.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "onchange": "^7.1.0",
+    "prettier": "2.8.1"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^7.6.0",
+    "chalk": "^5.2.0",
+    "chalk-table": "^1.0.2",
+    "commander": "^9.4.1",
+    "csv": "^6.2.5",
+    "fs": "0.0.1-security"
+  },
+  "engines": {
+    "node": ">=14.16"
+  }
+}
