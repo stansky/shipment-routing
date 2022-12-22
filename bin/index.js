@@ -1,7 +1,7 @@
 #! /usr/bin/env node
 import { program } from 'commander';
-import generateCsv from '../src/commands/generateCsv.js';
-import assignRoutes from '../src/commands/assignRoutes.js';
+import { generateCsv } from '../src/commands/generateCsv.js';
+import { assignRoutes } from '../src/commands/assignRoutes.js';
 
 program
     .command('generate-csv')

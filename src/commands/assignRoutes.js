@@ -12,7 +12,7 @@ const tableOptions = {
     ]
 };
 
-const assignRoutes = (opts) => {
+export const assignRoutes = (opts) => {
     const driversPromise = parseCsv(opts.drivers);
     const addressesPromise = parseCsv(opts.addresses);
 
@@ -134,4 +134,4 @@ const getFactors = (integer) => {
     return factors;
 };
 
-export default assignRoutes;
+export default { assignRoutes };

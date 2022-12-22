@@ -2,21 +2,19 @@ import chalk from 'chalk';
 import { createNames, createShippingAddresses } from '../utils/data.js';
 import { writeCsv } from '../utils/csv.js';
 
-const { log } = console;
+// eslint-disable-next-line no-console
+export const log = (msg) => console.log(msg);
 
-const generateCsv = (opts) => {
+export const generateCsv = (opts) => {
     const amountOfRecords = opts.size || 100;
     const names = createNames(amountOfRecords);
     const addresses = createShippingAddresses(amountOfRecords);
-
     if (!opts.addresses && !opts.name) {
         generateAddressesCsv(addresses)
             .then(generateNamesCsv(names))
             .finally(
                 log(
-                    chalk.greenBright(
-                        `Successfully created ${amountOfRecords} names and adddresses`
-                    )
+                    chalk.greenBright(`Successfully created ${amountOfRecords} names and addresses`)
                 )
             );
     }
@@ -41,8 +39,6 @@ const generateCsv = (opts) => {
     }
 };
 
-const generateNamesCsv = (names) => writeCsv(names, 'names.csv');
+export const generateNamesCsv = (names) => writeCsv(names, 'names.csv');
 
-const generateAddressesCsv = (addresses) => writeCsv(addresses, 'addresses.csv');
-
-export default generateCsv;
+export const generateAddressesCsv = (addresses) => writeCsv(addresses, 'addresses.csv');

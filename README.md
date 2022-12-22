@@ -35,8 +35,8 @@ Install Dependecies
 
 Simple run `routes assign` to assign shipping route addresses to drivers.
 
--   Specify path to a CSV file containing a list of names by using the `--names` flag
--   Specify path to a CSV file containing a list of names by using the `--addresses` flag
+-   Specify path to a CSV file containing a list of drivers by using the `--drivers` flag
+-   Specify path to a CSV file containing a list of addresses by using the `--addresses` flag
 
 ## Example
 
